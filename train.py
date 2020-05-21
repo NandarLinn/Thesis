@@ -42,7 +42,7 @@ model.summary()
 
 model.fit_generator(generator=gen_train.generate(), # batch_size here?
                     steps_per_epoch=gt_util_train.num_objects // batch_size,
-                    epochs=50,
+                    epochs=500,
                     validation_data=gen_val.generate(), # batch_size here?
                     validation_steps=gt_util_test.num_objects // batch_size,
                     callbacks=[
