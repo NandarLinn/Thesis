@@ -12,8 +12,8 @@ from utils.training import Logger, ModelSnapshot
 from crnn_data import GTUtility, InputGenerator, decode, alphabet87 as alphabet
 
 #Load dataset
-gt_util_train = GTUtility('dataset/')
-gt_util_test = GTUtility('dataset/', test=True)
+gt_util_train = GTUtility('data/')
+gt_util_test = GTUtility('data/', test=True)
 
 input_width = 256
 input_height = 32
@@ -42,7 +42,7 @@ model.summary()
 
 model.fit_generator(generator=gen_train.generate(), # batch_size here?
                     steps_per_epoch=gt_util_train.num_objects // batch_size,
-                    epochs=500,
+                    epochs=50,
                     validation_data=gen_val.generate(), # batch_size here?
                     validation_steps=gt_util_test.num_objects // batch_size,
                     callbacks=[

@@ -17,7 +17,9 @@ non-class methods:
 # character list for crnn training
 #alphabet87 = string.ascii_lowercase + string.ascii_uppercase + string.digits + ' +-*.,:!?%&$~/()[]<>"\'@#_'
 # alphabet87+="　4Jナッ受築３LV8ムワ新授補そ他番本鏡※内成0吊除廊畳(－イ５藤タ奥応X開の月号知ア宮D特色G戸検尺6株工目音燃栓P日助９豊2２g面階博B散W図務所E乳袋上合A正質水凡様名ン＝/エ壁式設者仕ク山登モ器市６地防当容計更ャ粧店パ理酸会Ｎ（議町フ整Ｄ士ネ板ラ動直台的CFO流洗Iコ田録e担棚伊,近7M室ス級）村i腰せTいHけ：縮県一陶隠幕カ間不記)愛住８グ建０社ー年第1付し35素立柱ブ掛仮訂ボ展風ト衣多野例ウ１康ル岡脱接方称ｏN消Ｂ火プ寄下メミ移７ＡS西Rシサ事t切テx４化レ9．-リ黒"
-alphabet87=" ကခဂဃငစဆဇဈညတထဒဓနဋဌဍဎဏပဖဗဘမယရလဝသဟဠအ_"
+alphabet87=" ကခဂဃငစဆဇဈညတထဒဓနဋဌဍဎဏပဖဗဘမယရလဝသဟဠအ_၍ဥဣ၎ဤ၌ဿဧဪ၏"
+alphabet87+="ိျောြာ။၊ံ့ဲုူှွးါ်္ီ"
+alphabet87+='၁၂၃၄၅၆၇၈၉၀'
 # chracter decode
 def decode(chars):
     blank_char = '_'
@@ -238,7 +240,7 @@ class GTUtility():
         self.data = []
         self.text = []
         for image_name in os.listdir(image_path):
-            #print(image_name)
+            print(image_name)
             img_height, img_width = cv2.imread(os.path.join(image_path, image_name)).shape[:2]
             boxes = []
             text = []

@@ -9,7 +9,7 @@ from crnn_model import CRNN
 from utils.training import Logger, ModelSnapshot
 from crnn_data import GTUtility, InputGenerator, decode, alphabet87 as alphabet
 
-gt_util_test = GTUtility('dataset/', test=True)
+gt_util_test = GTUtility('data/', test=True)
 
 input_width = 256
 input_height = 32
